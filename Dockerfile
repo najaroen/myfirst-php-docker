@@ -5,7 +5,8 @@ ENV ENVIROMENT production
 RUN echo "[PHP] \ndata.timezone = Asia/Bangkok" >> /usr/local/etc/php/php.ini
 
 RUN apt-get -y update \
-    && rm -r /var/lib/apt/lists/*
+    && rm -r /var/lib/apt/lists/* \
+    && echo champ
 
 RUN docker-php-ext-install mysqli   
 
